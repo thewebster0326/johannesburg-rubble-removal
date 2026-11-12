@@ -1,0 +1,7 @@
+Options -Indexes
+DirectoryIndex index.html
+
+RewriteEngine On
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.johannesburgrubbleremoval\.co\.za$ [NC]
+RewriteRule ^ https://johannesburgrubbleremoval.co.za%{REQUEST_URI} [L,R=301]
